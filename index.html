@@ -97,6 +97,15 @@
     .muted { color: var(--muted); }
     .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
     .tag { font-size: 0.8rem; padding: 5px 10px; background: #edf3fa; color: #415a76; border-radius: 999px; }
+    .hero-image { width: 100%; height: auto; border-radius: 12px; margin-bottom: 18px; border: 1px solid var(--line); }
+    .product-image { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+    .image-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 24px; }
+    .image-grid figure, .image-single figure { margin: 0; }
+    .image-grid figcaption, .image-single figcaption { font-size: 0.88rem; color: var(--muted); margin-top: 8px; }
+    .image-single { margin-top: 24px; }
+    .video-wrap { margin-top: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+    .video-wrap iframe, .video-wrap video { width: 100%; aspect-ratio: 16 / 9; display: block; border: 0; }
+    .video-wrap .video-caption { padding: 12px 16px; font-size: 0.9rem; color: var(--muted); }
     @media (max-width: 980px) {
       .hero-grid, .cta, .footer-grid { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr 1fr; }
@@ -132,7 +141,7 @@
         <div>
           <div class="eyebrow">Производитель оборудования для маркировки · Нальчик</div>
           <h1>Аппликаторы этикеток и оборудование для маркировки</h1>
-          <p class="lead"><strong>Мы проектируем и производим автоматические аппликаторы этикеток в Нальчике.</strong> Наш главный продукт — <strong>аппликатор этикеток РМ-150</strong>: он ровно наклеивает самоклеящиеся этикетки и этикетки с кодами маркировки на изделия, пока те движутся по конвейеру.</p>
+          <p class="lead"><strong>Мы проектируем и производим автоматические аппликаторы этикеток в Нальчике.</strong> Наш главный продукт - <strong>аппликатор этикеток РМ-150</strong>: он ровно наклеивает самоклеящиеся этикетки и этикетки с кодами маркировки на изделия, пока те движутся по конвейеру.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://rmgrupp.ru/catalog/applikatory/rm-150/">Аппликатор РМ-150 на сайте</a>
             <a class="btn btn-outline" href="mailto:info@rmgrupp.ru">Написать нам</a>
@@ -143,8 +152,8 @@
             <span>Тел.: <a href="tel:+74993467787">+7 (499) 346-77-87</a></span>
           </div>
         </div>
-        <aside class="hero-card" aria-label="Ключевые параметры РМ-150">
-          <h3>РМ-150 в цифрах</h3>
+        <aside class="hero-card hero-visual" aria-label="Аппликатор РМ-150">
+          <img src="assets/rm-150-hero.jpg" alt="Аппликатор этикеток РМ-150" class="hero-image" width="1147" height="861" loading="eager">
           <div class="stat-list">
             <div class="stat"><span class="label">Скорость подачи</span><span class="value">до 45 м/мин</span></div>
             <div class="stat"><span class="label">Ширина этикетки</span><span class="value">до 150 мм</span></div>
@@ -160,7 +169,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Коротко о нас</h2>
-          <p><strong>РМ-ГРУПП</strong> — производитель оборудования для этикетирования и маркировки. Мы делаем индивидуальное оборудование под продукцию заказчика: высокое качество, надёжная конструкция и антивандальное исполнение. Всё собираем сами, на собственном производстве в Нальчике (Кабардино-Балкарская Республика).</p>
+          <p><strong>РМ-ГРУПП</strong> - производитель оборудования для этикетирования и маркировки. Мы делаем индивидуальное оборудование под продукцию заказчика: высокое качество, надёжная конструкция и антивандальное исполнение. Всё собираем сами, на собственном производстве в Нальчике (Кабардино-Балкарская Республика).</p>
         </div>
         <div class="grid-2">
           <div class="card">
@@ -203,7 +212,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Аппликатор этикеток РМ-150</h2>
-          <p><strong>Автоматический аппликатор этикеток РМ-150</strong> — это устройство для нанесения самоклеящихся рулонных этикеток на ходу конвейера. Он отделяет этикетку от подложки и накладывает её на изделие в нужный момент и в нужном месте. Аппликатор одинаково хорошо работает с <strong>бумажными и плёночными этикетками</strong>, в том числе <strong>прозрачными и непрозрачными</strong>.</p>
+          <p><strong>Автоматический аппликатор этикеток РМ-150</strong> - это устройство для нанесения самоклеящихся рулонных этикеток на ходу конвейера. Он отделяет этикетку от подложки и накладывает её на изделие в нужный момент и в нужном месте. Аппликатор одинаково хорошо работает с <strong>бумажными и плёночными этикетками</strong>, в том числе <strong>прозрачными и непрозрачными</strong>.</p>
         </div>
         <div class="grid-2" style="margin-bottom:20px;">
           <div class="card">
@@ -243,6 +252,16 @@
           </table>
         </div>
         <p class="muted" style="margin-top:14px;">Каждая модель выпускается в левом и правом исполнении и комплектуется стойками разного исполнения. Поэтому аппликатор можно встроить в большинство линий розлива и фасовки или установить на станину этикетировочной машины.</p>
+        <div class="image-grid">
+          <figure>
+            <img src="assets/rm-150-two-applicators.jpg" alt="Два аппликатора РМ-150 на линии" class="product-image" width="1200" height="900" loading="lazy">
+            <figcaption>Два аппликатора РМ-150 на одной линии - для двух этикеток на изделие.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/rm-150-side.jpg" alt="Аппликатор РМ-150, вид сбоку" class="product-image" width="1200" height="900" loading="lazy">
+            <figcaption>РМ-150 в рабочей конфигурации на конвейере.</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -279,7 +298,13 @@
                 <li>Изделие проходит мимо ножа, этикетка ложится на него.</li>
                 <li>Цикл повторяется.</li>
               </ul>
-              <div class="note"><strong>Важно:</strong> зазор между ножом-отделителем и изделием должен быть <strong>3–5 мм</strong>, а нож стоит параллельно изделию. Так этикетка с кодом маркировки ложится ровно и без перекоса.</div>
+              <div class="note"><strong>Важно:</strong> зазор между ножом-отделителем и изделием должен быть <strong>3-5 мм</strong>, а нож стоит параллельно изделию. Так этикетка с кодом маркировки ложится ровно и без перекоса.</div>
+            </div>
+            <div class="image-single">
+              <figure>
+                <img src="assets/rm-150-detail.jpg" alt="Аппликатор РМ-150, вид крупным планом" class="product-image" width="1200" height="900" loading="lazy">
+                <figcaption>Конструкция РМ-150: алюминиевая плита, узел протяжки, нож-отделитель и выносной контроллер.</figcaption>
+              </figure>
             </div>
           </div>
         </div>
@@ -318,12 +343,12 @@
             <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
             <tbody>
               <tr><td>Скорость подачи этикеток</td><td>до 45 м/мин</td></tr>
-              <tr><td>Длина этикетки</td><td>10 – 1000 мм</td></tr>
+              <tr><td>Длина этикетки</td><td>10 - 1000 мм</td></tr>
               <tr><td>Ширина этикетки (с подложкой)</td><td>до 150 мм</td></tr>
               <tr><td>Диаметр втулки рулона</td><td>40 / 76 мм</td></tr>
               <tr><td>Максимальный диаметр рулона</td><td>300 мм</td></tr>
               <tr><td>Расстояние между этикетками</td><td>не менее 2 мм</td></tr>
-              <tr><td>Рекомендуемая толщина этикетки</td><td>0,03 – 0,1 мм</td></tr>
+              <tr><td>Рекомендуемая толщина этикетки</td><td>0,03 - 0,1 мм</td></tr>
               <tr><td>Питание</td><td>1 фаза, 220 В, 50 Гц</td></tr>
               <tr><td>Потребляемая мощность</td><td>не более 150 Вт</td></tr>
               <tr><td>Габариты (Д × Ш × В)</td><td>не более 735 × 380 × 397 мм</td></tr>
@@ -420,7 +445,7 @@
             <div class="section-head"><h2>Гарантия и сервис</h2></div>
             <div class="card">
               <ul class="feature-list">
-                <li>Гарантия на аппликатор — <strong>12 месяцев</strong> с момента ввода в эксплуатацию, срок службы — <strong>5 лет</strong>.</li>
+                <li>Гарантия на аппликатор - <strong>12 месяцев</strong> с момента ввода в эксплуатацию, срок службы - <strong>5 лет</strong>.</li>
                 <li>Производитель бесплатно устраняет дефекты, вызванные производственными недостатками, и заменяет детали.</li>
                 <li>Гарантия не распространяется на расходные материалы и естественный износ роликов и ремней.</li>
                 <li>Для обращения по гарантии нужен серийный номер аппликатора с идентификационной таблички на раме.</li>
